@@ -1,0 +1,408 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+\documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}
+\usetheme{SimplePlus}
+
+\usepackage{hyperref}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{amsmath, amsfonts, amssymb, amsthm, latexsym}
+\usepackage[absolute,overlay]{textpos}
+
+% \usepackage{authblk}
+\usepackage{movie15}
+
+
+%\usepackage{showkeys}
+
+\usepackage{cancel}
+%\usepackage{epsfig,cancel}
+
+
+\usepackage{color}
+% \usepackage{physics}
+
+\usepackage[toc,page]{appendix}
+%\usepackage{geometry}
+\usepackage{braket}
+\usepackage{bm}
+
+\usepackage{graphicx}
+
+\usepackage{tikz}
+
+\usepackage{subfigure}
+
+\usepackage{soul}
+
+\usepackage{comment}
+
+
+\let\Re\undefined
+
+\let\Im\undefined
+
+\DeclareMathOperator{\Re}{Re}
+
+\DeclareMathOperator{\Im}{Im}
+
+
+\DeclareMathOperator{\capa}{cap}
+
+\DeclareMathOperator{\supp}{supp}
+
+\DeclareMathOperator{\cl}{cl}
+
+
+\newcommand{\ds}{\displaystyle}
+
+
+
+%\newtheorem{algorithm}[theorem]{Algorithm}
+
+
+
+
+
+\definecolor{shadecolor}{rgb}{0.95, 0.95, 0.86}
+
+\usetikzlibrary{decorations.markings}
+
+
+
+\def\red#1{\textcolor[rgb]{0.9, 0, 0}{#1} }
+
+\def\yellow#1{\textcolor[rgb]{0.6, 0.5, 0 }{#1}}
+
+\def\black{\special{color cmyk 0 0 0 1000}}
+
+\def\cyan#1{\textcolor[rgb]{0,0.7,0.7}{#1}}
+
+\def\blue#1{\textcolor[rgb]{0,0,1}{#1}}
+
+\def\green#1{\textcolor[rgb]{0.2, 0.5,  0} {#1}}
+
+
+
+\def\remove#1{\red{\cancel{#1}}}
+
+\def\removelong#1{\red{ \small #1}}
+
+\def\replace#1#2{\red{\cancel{{\hbox{\scriptsize  {$#1$}} }}}{\blue {#2}}}
+
+%\def\insrt#1{\blue{#1}}
+
+\def\insrt#1{\blue{#1}}
+
+
+
+\def\be{\begin{equation}}
+
+\def\ee{\end{equation}}
+
+%
+
+\def\bi{\begin{itemize}}
+
+\def\ei{\end{itemize}}
+
+
+%
+
+\def\bea{\begin{eqnarray}}
+
+\def\eea{\end{eqnarray}}
+
+%
+
+\def\bl{\begin{lemma}}
+
+\def\el{\end{lemma}}
+
+%
+
+\def\bd{\begin{definition}}
+
+\def\ed{\end{definition}}
+
+%
+
+\def\bp{\begin{proposition}}
+
+\def\ep{\end{proposition}}
+
+%
+
+
+\def\br{\begin{remark}}
+
+\def\er{\end{remark}}
+
+
+
+%
+
+\def\bt{\begin{theorem}}
+
+\def\et{\end{theorem}}
+
+%
+
+\def\bc{\begin{corollary}}
+
+\def\ec{\end{corollary}}
+
+%
+
+\def\ol{\overline}
+
+\def\ra{\rightarrow}
+
+\newcommand{\al}{\alpha}
+
+%\newcommand{\bt}{\beta}
+
+\newcommand{\de}{\delta}
+
+\newcommand{\ga}{\gamma}
+
+\newcommand{\G}{\Gamma}
+
+\renewcommand{\O}{\Omega}
+
+\renewcommand{\k}{\varkappa}
+
+\renewcommand{\d}{\delta}
+
+\newcommand{\D}{\Delta}
+
+\newcommand{\e}{\varepsilon}
+
+\renewcommand{\o}{\omega}
+
+\newcommand{\g}{\gamma}
+
+\newcommand{\la}{\lambda}
+
+\newcommand{\si}{\sigma}
+
+\newcommand{\ph}{\varphi}
+
+\renewcommand{\part}{\partial}
+
+\newcommand{\vn}{\varnothing}
+
+\newcommand{\up}{\upsilon}
+
+\newcommand{\coi}{C_0^{\infty}}
+
+\newcommand{\ci}{C^{\infty}}
+
+\newcommand{\ts}{\text{supp}\,}
+
+\newcommand{\tB}{\tilde B}
+
+\newcommand{\tss}{\text{singsupp}\,}
+
+\renewcommand{\S}{\Sigma}
+
+\newcommand{\rn}{\mathbb R^n}
+
+\newcommand{\adx}{\vct\cdot x}
+
+\newcommand{\Sn}{S^{n-1}}
+
+\newcommand{\sg}{\text{sgn}}
+
+\newcommand{\ibr}{\int_{\br}}
+
+\newcommand{\brt}{\br^2}
+
+\newcommand{\irt}{\int_{\brt}}
+
+\newcommand{\ioi}{\int_0^{\infty}}
+
+\newcommand{\iii}{\int_{-\infty}^{\infty}}
+
+\newcommand{\isn}{\int_{\Sn}}
+
+\newcommand{\fle}{f_{\Lambda\e}}
+
+\newcommand{\CS}{{\mathcal S}}
+
+\newcommand{\CD}{{\mathcal D}}
+
+\newcommand{\CH}{{\mathcal H}}
+
+\newcommand{\CB}{\mathcal B}
+
+\newcommand{\bs}{\boldsymbol}
+
+\newcommand{\Res}{\text{Res} \,}
+
+\newcommand{\sign}{\rm{sign}}
+
+\def\Rscr{\mathcal R}
+
+\newcommand{\bu}{\bar{u}}
+
+\newcommand{\sech}{\hbox{sech}}
+
+
+\def\le{\left}
+
+\def\ri{\right}
+
+\def\B{\boldsymbol {\mathfrak B}}
+
+\def \pa{\partial}
+
+\def\C{{\mathbb C}}
+
+%\def\L{\mathcal L}
+
+\def\R{{\mathbb R}}
+
+\def\N{{\mathbb N}}
+
+%\def\z {{\mathbf z}}
+
+\def\wh{\widehat}
+
+\def\H{{\cal H}}
+
+\def\Z{{\mathbb Z}}
+
+\def\u{\mathfrak u}
+
+\def\a{\alpha}
+
+\def\b{\beta}
+
+\def\g{\gamma}
+
+%\def\gg{\mathfrak g}
+
+\def\gt{\hat\gamma}
+
+\def\vt{\hat v}
+
+\def\gtb{\wh{\boldsymbol \gamma}}
+
+\def\ct{\hat c}
+
+%\def\d{\,\mathrm d}
+
+\def\K{\mathcal K}
+
+\def\m{\mu}
+
+\def\l{\lambda}
+
+\def\n{ {\nu}}
+
+\def\Pot{\mathcal {P}}
+
+\def\1{{\bf 1}}
+
+\def\r{\rho}
+
+%{\mathbf r}}
+
+\def\c{ {\mathbf c}}
+
+\def\s{ {\sigma}}
+
+\def\t{ {\tau}}
+
+\def\tsi{ {\tilde\sigma}}
+
+\def\th{ {\theta}}
+
+\def\w{{\mathbf w}}
+
+\def\x{\xi}
+
+\def\z{\zeta}
+
+\def\ch{\mathbf {C}}
+
+\def\sh{\mathbf {S}}
+
+\def\hf{\frac{1}{2}}
+
+\def \Th{\Theta}
+
+\def\tf{\tilde\varphi}
+
+\newcommand{\Iscr}{\mathcal I}
+\newcommand{\Jscr}{\mathcal J}
+\newcommand{\Bscr}{\mathcal B}
+\newcommand{\Lscr}{\mathcal L}
+\newcommand{\Wscr}{\mathcal W}
+\newcommand{\Mscr}{\mathcal M}
+\newcommand{\Nscr}{\mathcal N}
+%\newcommand{\Rscr}{\mathcal R}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[short title]{MAP 4113 Probability, Random Processes and Applications} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+
+\author{Instructor: Fudong Wang}
+
+\institute[UCF] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+    Department of mathematics\\
+    University of Central Florida
+}
+\date{} % Date, can be changed to a custom date
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{frame}
+    % Print the title page as the first slide
+    \vspace{-2cm}
+    \titlepage
+    \begin{center}
+Lecture Notes for Fall2022 semester.
+\end{center}
+\end{frame}
+
+\AtBeginSection[]
+{
+ \begin{frame}<beamer>
+ \frametitle{Plan}
+ \tableofcontents[currentsection]
+ \end{frame}
+}
+\AtBeginSubsection[]
+{
+    \begin{frame}
+        \frametitle{Table of Contents}
+        \tableofcontents[currentsection,currentsubsection]
+    \end{frame}
+}
+%------------Lecture 1------------------
+
+%\input{lec1.tex}
+\input{lec2.tex}
+
+
+
+
+
+
+%------------------------------------------------
+
+
+
+\end{document}
